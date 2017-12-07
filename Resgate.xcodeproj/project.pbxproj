@@ -7,13 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		570C2C460DCC2AE147F20973 /* Pods_Resgate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD4FC9A0F3679916EC0729F /* Pods_Resgate.framework */; };
+		A23AAD34E5D5A0BFE69787EA /* Pods_ResgateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D760106C29DB2508DA15E0E /* Pods_ResgateTests.framework */; };
+		B62248361FD5CB1D00953436 /* mapaNovoAtendimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62248351FD5CB1D00953436 /* mapaNovoAtendimentoViewController.swift */; };
+		B62522821FCE57C4004D6C0A /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62522811FCE57C4004D6C0A /* TextFieldExtensions.swift */; };
+		B6350D581FD6CD2300BF845E /* ocorrenciaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6350D571FD6CD2300BF845E /* ocorrenciaTableViewController.swift */; };
+		B6350D5A1FD6E28200BF845E /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6350D591FD6E28200BF845E /* HomeTableViewController.swift */; };
+		B660314F1FD398920030314A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B660314E1FD398920030314A /* LoginViewController.swift */; };
+		B666BAE61FD1B79A00DBFEDE /* AppGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666BAE51FD1B79A00DBFEDE /* AppGlobal.swift */; };
+		B66E1B2F1FCEFBD100782D62 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E1B2E1FCEFBD100782D62 /* StringExtensions.swift */; };
+		B66E1B351FCF2CA000782D62 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E1B341FCF2CA000782D62 /* Alerta.swift */; };
+		B66E1B371FCF319200782D62 /* Validacoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E1B361FCF319200782D62 /* Validacoes.swift */; };
+		B67388BB1FD78292000ACAFD /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67388BA1FD78292000ACAFD /* PhotoViewController.swift */; };
+		B67388C11FD7A57D000ACAFD /* ImagensFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67388C01FD7A57D000ACAFD /* ImagensFoto.swift */; };
+		B67388C31FD7AF92000ACAFD /* CallCenterNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67388C21FD7AF92000ACAFD /* CallCenterNumber.swift */; };
+		B67388C71FD7B584000ACAFD /* TipoTraumaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67388C61FD7B584000ACAFD /* TipoTraumaTableViewController.swift */; };
+		B67388C91FD7B9CD000ACAFD /* TipoTrauma.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67388C81FD7B9CD000ACAFD /* TipoTrauma.swift */; };
+		B67479DE1FD83960008BCDC2 /* IdentificacaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67479DD1FD83960008BCDC2 /* IdentificacaoTableViewController.swift */; };
+		B67479E01FD83C13008BCDC2 /* OperadoraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67479DF1FD83C13008BCDC2 /* OperadoraTableViewController.swift */; };
+		B67479E21FD8415F008BCDC2 /* HospitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67479E11FD8415F008BCDC2 /* HospitalTableViewController.swift */; };
+		B6857A911FCD76950074F547 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B65670561FCD6CE300FFDB32 /* GoogleService-Info.plist */; };
 		B68E9C161FCC98030028AE1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68E9C151FCC98030028AE1B /* AppDelegate.swift */; };
-		B68E9C181FCC98030028AE1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68E9C171FCC98030028AE1B /* ViewController.swift */; };
 		B68E9C1B1FCC98030028AE1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68E9C191FCC98030028AE1B /* Main.storyboard */; };
 		B68E9C1E1FCC98030028AE1B /* Resgate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B68E9C1C1FCC98030028AE1B /* Resgate.xcdatamodeld */; };
-		B68E9C201FCC98030028AE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B68E9C1F1FCC98030028AE1B /* Assets.xcassets */; };
 		B68E9C231FCC98030028AE1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68E9C211FCC98030028AE1B /* LaunchScreen.storyboard */; };
 		B68E9C2E1FCC98030028AE1B /* ResgateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68E9C2D1FCC98030028AE1B /* ResgateTests.swift */; };
+		B692D4E61FD358D9002F20DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B692D4E51FD358D8002F20DE /* Assets.xcassets */; };
+		B6977DE11FD80E24005114E2 /* IdentificacaoBeneficiario.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6977DE01FD80E24005114E2 /* IdentificacaoBeneficiario.swift */; };
+		B6977DE31FD8106A005114E2 /* OperadoraSaude.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6977DE21FD8106A005114E2 /* OperadoraSaude.swift */; };
+		B6977DE51FD811A9005114E2 /* InformacaoClinica.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6977DE41FD811A9005114E2 /* InformacaoClinica.swift */; };
+		B6977DE71FD8125F005114E2 /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6977DE61FD8125F005114E2 /* Hospital.swift */; };
+		B69A84311FD1E38B00288AC7 /* FirebaseCustomizado.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69A84301FD1E38B00288AC7 /* FirebaseCustomizado.swift */; };
+		B6A995FC1FD70676001AB71B /* ocorrencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A995FB1FD70676001AB71B /* ocorrencia.swift */; };
+		B6A995FE1FD709C3001AB71B /* EnderecoMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A995FD1FD709C3001AB71B /* EnderecoMapa.swift */; };
+		B6BEBC7B1FD3D9F500C98350 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BEBC7A1FD3D9F500C98350 /* CadastroViewController.swift */; };
+		B6D01A5D1FD4482A008DD965 /* resetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D01A5C1FD4482A008DD965 /* resetPasswordViewController.swift */; };
+		B6E5DFAC1FD84D6C001C581A /* InformacaoClinicaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E5DFAB1FD84D6C001C581A /* InformacaoClinicaTableViewController.swift */; };
+		B6E61C351FD0E68600564B37 /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E61C341FD0E68600564B37 /* InitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +57,51 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D760106C29DB2508DA15E0E /* Pods_ResgateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResgateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD611B351FAF9E7C4BA4556 /* Pods-ResgateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResgateTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ResgateTests/Pods-ResgateTests.release.xcconfig"; sourceTree = "<group>"; };
+		1C6938AF8DA6CE085CB85E4B /* Pods-Resgate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resgate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Resgate/Pods-Resgate.release.xcconfig"; sourceTree = "<group>"; };
+		5E5F85C2B9C74B446737BEB3 /* Pods-Resgate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resgate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Resgate/Pods-Resgate.debug.xcconfig"; sourceTree = "<group>"; };
+		7B20B0CF918665FC53F02F23 /* Pods-ResgateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResgateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ResgateTests/Pods-ResgateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8FD4FC9A0F3679916EC0729F /* Pods_Resgate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resgate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62248351FD5CB1D00953436 /* mapaNovoAtendimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapaNovoAtendimentoViewController.swift; sourceTree = "<group>"; };
+		B62522811FCE57C4004D6C0A /* TextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
+		B6350D571FD6CD2300BF845E /* ocorrenciaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ocorrenciaTableViewController.swift; sourceTree = "<group>"; };
+		B6350D591FD6E28200BF845E /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		B65670561FCD6CE300FFDB32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B660314E1FD398920030314A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B666BAE51FD1B79A00DBFEDE /* AppGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGlobal.swift; sourceTree = "<group>"; };
+		B66E1B2E1FCEFBD100782D62 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		B66E1B341FCF2CA000782D62 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
+		B66E1B361FCF319200782D62 /* Validacoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validacoes.swift; sourceTree = "<group>"; };
+		B67388BA1FD78292000ACAFD /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		B67388C01FD7A57D000ACAFD /* ImagensFoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagensFoto.swift; sourceTree = "<group>"; };
+		B67388C21FD7AF92000ACAFD /* CallCenterNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCenterNumber.swift; sourceTree = "<group>"; };
+		B67388C61FD7B584000ACAFD /* TipoTraumaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoTraumaTableViewController.swift; sourceTree = "<group>"; };
+		B67388C81FD7B9CD000ACAFD /* TipoTrauma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoTrauma.swift; sourceTree = "<group>"; };
+		B67479DD1FD83960008BCDC2 /* IdentificacaoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificacaoTableViewController.swift; sourceTree = "<group>"; };
+		B67479DF1FD83C13008BCDC2 /* OperadoraTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperadoraTableViewController.swift; sourceTree = "<group>"; };
+		B67479E11FD8415F008BCDC2 /* HospitalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalTableViewController.swift; sourceTree = "<group>"; };
 		B68E9C121FCC98030028AE1B /* Resgate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resgate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68E9C151FCC98030028AE1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B68E9C171FCC98030028AE1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B68E9C1A1FCC98030028AE1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B68E9C1D1FCC98030028AE1B /* Resgate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Resgate.xcdatamodel; sourceTree = "<group>"; };
-		B68E9C1F1FCC98030028AE1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B68E9C221FCC98030028AE1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B68E9C241FCC98030028AE1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B68E9C291FCC98030028AE1B /* ResgateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResgateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68E9C2D1FCC98030028AE1B /* ResgateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResgateTests.swift; sourceTree = "<group>"; };
 		B68E9C2F1FCC98030028AE1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B692D4E51FD358D8002F20DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B6977DE01FD80E24005114E2 /* IdentificacaoBeneficiario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificacaoBeneficiario.swift; sourceTree = "<group>"; };
+		B6977DE21FD8106A005114E2 /* OperadoraSaude.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperadoraSaude.swift; sourceTree = "<group>"; };
+		B6977DE41FD811A9005114E2 /* InformacaoClinica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacaoClinica.swift; sourceTree = "<group>"; };
+		B6977DE61FD8125F005114E2 /* Hospital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
+		B69A84301FD1E38B00288AC7 /* FirebaseCustomizado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCustomizado.swift; sourceTree = "<group>"; };
+		B6A995FB1FD70676001AB71B /* ocorrencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ocorrencia.swift; sourceTree = "<group>"; };
+		B6A995FD1FD709C3001AB71B /* EnderecoMapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnderecoMapa.swift; sourceTree = "<group>"; };
+		B6BEBC7A1FD3D9F500C98350 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		B6D01A5C1FD4482A008DD965 /* resetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resetPasswordViewController.swift; sourceTree = "<group>"; };
+		B6E5DFAB1FD84D6C001C581A /* InformacaoClinicaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacaoClinicaTableViewController.swift; sourceTree = "<group>"; };
+		B6E61C341FD0E68600564B37 /* InitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				570C2C460DCC2AE147F20973 /* Pods_Resgate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +117,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23AAD34E5D5A0BFE69787EA /* Pods_ResgateTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C193B67BEA563A600E8FD71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E5F85C2B9C74B446737BEB3 /* Pods-Resgate.debug.xcconfig */,
+				1C6938AF8DA6CE085CB85E4B /* Pods-Resgate.release.xcconfig */,
+				7B20B0CF918665FC53F02F23 /* Pods-ResgateTests.debug.xcconfig */,
+				1BD611B351FAF9E7C4BA4556 /* Pods-ResgateTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A50E885C16363FC4B3A10DC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FD4FC9A0F3679916EC0729F /* Pods_Resgate.framework */,
+				0D760106C29DB2508DA15E0E /* Pods_ResgateTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B62248341FD5ABB400953436 /* SupporFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B68E9C151FCC98030028AE1B /* AppDelegate.swift */,
+				B692D4E51FD358D8002F20DE /* Assets.xcassets */,
+				B68E9C211FCC98030028AE1B /* LaunchScreen.storyboard */,
+				B65670561FCD6CE300FFDB32 /* GoogleService-Info.plist */,
+				B68E9C1C1FCC98030028AE1B /* Resgate.xcdatamodeld */,
+			);
+			path = SupporFiles;
+			sourceTree = "<group>";
+		};
 		B68E9C091FCC98030028AE1B = {
 			isa = PBXGroup;
 			children = (
 				B68E9C141FCC98030028AE1B /* Resgate */,
 				B68E9C2C1FCC98030028AE1B /* ResgateTests */,
 				B68E9C131FCC98030028AE1B /* Products */,
+				8C193B67BEA563A600E8FD71 /* Pods */,
+				A50E885C16363FC4B3A10DC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +179,11 @@
 		B68E9C141FCC98030028AE1B /* Resgate */ = {
 			isa = PBXGroup;
 			children = (
-				B68E9C151FCC98030028AE1B /* AppDelegate.swift */,
-				B68E9C171FCC98030028AE1B /* ViewController.swift */,
 				B68E9C191FCC98030028AE1B /* Main.storyboard */,
-				B68E9C1F1FCC98030028AE1B /* Assets.xcassets */,
-				B68E9C211FCC98030028AE1B /* LaunchScreen.storyboard */,
 				B68E9C241FCC98030028AE1B /* Info.plist */,
-				B68E9C1C1FCC98030028AE1B /* Resgate.xcdatamodeld */,
+				B69CAB9F1FCDC51D00E7A877 /* Controllers */,
+				B69CABA41FCE00FB00E7A877 /* Models */,
+				B62248341FD5ABB400953436 /* SupporFiles */,
 			);
 			path = Resgate;
 			sourceTree = "<group>";
@@ -99,6 +197,48 @@
 			path = ResgateTests;
 			sourceTree = "<group>";
 		};
+		B69CAB9F1FCDC51D00E7A877 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6BEBC7A1FD3D9F500C98350 /* CadastroViewController.swift */,
+				B6E61C341FD0E68600564B37 /* InitViewController.swift */,
+				B660314E1FD398920030314A /* LoginViewController.swift */,
+				B6D01A5C1FD4482A008DD965 /* resetPasswordViewController.swift */,
+				B62248351FD5CB1D00953436 /* mapaNovoAtendimentoViewController.swift */,
+				B6350D571FD6CD2300BF845E /* ocorrenciaTableViewController.swift */,
+				B6350D591FD6E28200BF845E /* HomeTableViewController.swift */,
+				B67388BA1FD78292000ACAFD /* PhotoViewController.swift */,
+				B67388C61FD7B584000ACAFD /* TipoTraumaTableViewController.swift */,
+				B67479DD1FD83960008BCDC2 /* IdentificacaoTableViewController.swift */,
+				B67479DF1FD83C13008BCDC2 /* OperadoraTableViewController.swift */,
+				B67479E11FD8415F008BCDC2 /* HospitalTableViewController.swift */,
+				B6E5DFAB1FD84D6C001C581A /* InformacaoClinicaTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B69CABA41FCE00FB00E7A877 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B62522811FCE57C4004D6C0A /* TextFieldExtensions.swift */,
+				B66E1B2E1FCEFBD100782D62 /* StringExtensions.swift */,
+				B66E1B341FCF2CA000782D62 /* Alerta.swift */,
+				B66E1B361FCF319200782D62 /* Validacoes.swift */,
+				B666BAE51FD1B79A00DBFEDE /* AppGlobal.swift */,
+				B69A84301FD1E38B00288AC7 /* FirebaseCustomizado.swift */,
+				B6A995FB1FD70676001AB71B /* ocorrencia.swift */,
+				B6A995FD1FD709C3001AB71B /* EnderecoMapa.swift */,
+				B67388C01FD7A57D000ACAFD /* ImagensFoto.swift */,
+				B67388C21FD7AF92000ACAFD /* CallCenterNumber.swift */,
+				B67388C81FD7B9CD000ACAFD /* TipoTrauma.swift */,
+				B6977DE01FD80E24005114E2 /* IdentificacaoBeneficiario.swift */,
+				B6977DE21FD8106A005114E2 /* OperadoraSaude.swift */,
+				B6977DE41FD811A9005114E2 /* InformacaoClinica.swift */,
+				B6977DE61FD8125F005114E2 /* Hospital.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B68E9C321FCC98030028AE1B /* Build configuration list for PBXNativeTarget "Resgate" */;
 			buildPhases = (
+				6DD1BB76084BE3F25DBD05F6 /* [CP] Check Pods Manifest.lock */,
 				B68E9C0E1FCC98030028AE1B /* Sources */,
 				B68E9C0F1FCC98030028AE1B /* Frameworks */,
 				B68E9C101FCC98030028AE1B /* Resources */,
+				68754F186448FBB0DA4A9D1D /* [CP] Embed Pods Frameworks */,
+				50DFB955065A07C3AD00EA0F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,9 +266,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B68E9C351FCC98030028AE1B /* Build configuration list for PBXNativeTarget "ResgateTests" */;
 			buildPhases = (
+				715263038731FF0BBA40933A /* [CP] Check Pods Manifest.lock */,
 				B68E9C251FCC98030028AE1B /* Sources */,
 				B68E9C261FCC98030028AE1B /* Frameworks */,
 				B68E9C271FCC98030028AE1B /* Resources */,
+				D66A6C5A61131E9061BAA307 /* [CP] Embed Pods Frameworks */,
+				2B221487541908CA13445B8B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,7 +329,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B68E9C231FCC98030028AE1B /* LaunchScreen.storyboard in Resources */,
-				B68E9C201FCC98030028AE1B /* Assets.xcassets in Resources */,
+				B6857A911FCD76950074F547 /* GoogleService-Info.plist in Resources */,
+				B692D4E61FD358D9002F20DE /* Assets.xcassets in Resources */,
 				B68E9C1B1FCC98030028AE1B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,14 +344,153 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B221487541908CA13445B8B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ResgateTests/Pods-ResgateTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50DFB955065A07C3AD00EA0F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Resgate/Pods-Resgate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68754F186448FBB0DA4A9D1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Resgate/Pods-Resgate-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Resgate/Pods-Resgate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DD1BB76084BE3F25DBD05F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Resgate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		715263038731FF0BBA40933A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ResgateTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D66A6C5A61131E9061BAA307 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ResgateTests/Pods-ResgateTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B68E9C0E1FCC98030028AE1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B666BAE61FD1B79A00DBFEDE /* AppGlobal.swift in Sources */,
+				B6977DE71FD8125F005114E2 /* Hospital.swift in Sources */,
+				B66E1B2F1FCEFBD100782D62 /* StringExtensions.swift in Sources */,
+				B6977DE11FD80E24005114E2 /* IdentificacaoBeneficiario.swift in Sources */,
+				B6E5DFAC1FD84D6C001C581A /* InformacaoClinicaTableViewController.swift in Sources */,
+				B6E61C351FD0E68600564B37 /* InitViewController.swift in Sources */,
+				B67479E01FD83C13008BCDC2 /* OperadoraTableViewController.swift in Sources */,
+				B6A995FE1FD709C3001AB71B /* EnderecoMapa.swift in Sources */,
+				B6D01A5D1FD4482A008DD965 /* resetPasswordViewController.swift in Sources */,
 				B68E9C1E1FCC98030028AE1B /* Resgate.xcdatamodeld in Sources */,
-				B68E9C181FCC98030028AE1B /* ViewController.swift in Sources */,
+				B67479DE1FD83960008BCDC2 /* IdentificacaoTableViewController.swift in Sources */,
+				B62522821FCE57C4004D6C0A /* TextFieldExtensions.swift in Sources */,
+				B660314F1FD398920030314A /* LoginViewController.swift in Sources */,
 				B68E9C161FCC98030028AE1B /* AppDelegate.swift in Sources */,
+				B67388C11FD7A57D000ACAFD /* ImagensFoto.swift in Sources */,
+				B6BEBC7B1FD3D9F500C98350 /* CadastroViewController.swift in Sources */,
+				B6350D581FD6CD2300BF845E /* ocorrenciaTableViewController.swift in Sources */,
+				B62248361FD5CB1D00953436 /* mapaNovoAtendimentoViewController.swift in Sources */,
+				B6977DE31FD8106A005114E2 /* OperadoraSaude.swift in Sources */,
+				B6977DE51FD811A9005114E2 /* InformacaoClinica.swift in Sources */,
+				B6350D5A1FD6E28200BF845E /* HomeTableViewController.swift in Sources */,
+				B66E1B371FCF319200782D62 /* Validacoes.swift in Sources */,
+				B66E1B351FCF2CA000782D62 /* Alerta.swift in Sources */,
+				B67388C71FD7B584000ACAFD /* TipoTraumaTableViewController.swift in Sources */,
+				B67479E21FD8415F008BCDC2 /* HospitalTableViewController.swift in Sources */,
+				B69A84311FD1E38B00288AC7 /* FirebaseCustomizado.swift in Sources */,
+				B67388BB1FD78292000ACAFD /* PhotoViewController.swift in Sources */,
+				B67388C91FD7B9CD000ACAFD /* TipoTrauma.swift in Sources */,
+				B6A995FC1FD70676001AB71B /* ocorrencia.swift in Sources */,
+				B67388C31FD7AF92000ACAFD /* CallCenterNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,13 +641,14 @@
 		};
 		B68E9C331FCC98030028AE1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E5F85C2B9C74B446737BEB3 /* Pods-Resgate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 564XMJ3SAC;
 				INFOPLIST_FILE = Resgate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.5mt.Resgate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.5mt.rthh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -370,13 +657,14 @@
 		};
 		B68E9C341FCC98030028AE1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C6938AF8DA6CE085CB85E4B /* Pods-Resgate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 564XMJ3SAC;
 				INFOPLIST_FILE = Resgate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.5mt.Resgate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.5mt.rthh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -385,6 +673,7 @@
 		};
 		B68E9C361FCC98030028AE1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B20B0CF918665FC53F02F23 /* Pods-ResgateTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -402,6 +691,7 @@
 		};
 		B68E9C371FCC98030028AE1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BD611B351FAF9E7C4BA4556 /* Pods-ResgateTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
