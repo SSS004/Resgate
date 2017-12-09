@@ -176,9 +176,9 @@ class ocorrenciaTableViewController: UITableViewController {
       setaEndereco.setImage(#imageLiteral(resourceName: "Next"), for: UIControlState.normal)
     }
 
-    lblTotalDocumentos.text = String(umaOcorrencia.documentos.totalImagens)
+    lblTotalDocumentos.text = String(umaOcorrencia.imagensFotos.count)
     // Se for uma nova ocorrencia, mostra a View Controller do MAPA
-    if (umaOcorrencia.documentos.totalImagens == 0)  {
+    if (umaOcorrencia.imagensFotos.count == 0)  {
       setaDocumentos.setImage(#imageLiteral(resourceName: "need-information"), for: UIControlState.normal)
     }  else {
       setaDocumentos.setImage(#imageLiteral(resourceName: "Next"), for: UIControlState.normal)

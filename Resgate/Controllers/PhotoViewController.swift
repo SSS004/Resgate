@@ -8,8 +8,7 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-  
+class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
   
 //##########################################
 //MARK: Enumerations
@@ -19,26 +18,18 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
 //##########################################
 //MARK: Outlet to Objects
 //##########################################
-  @IBOutlet weak var imagem1: UIImageView!
-  @IBOutlet weak var imagem2: UIImageView!
-  @IBOutlet weak var imagem3: UIImageView!
-  @IBOutlet weak var imagem4: UIImageView!
-  @IBOutlet weak var imagem5: UIImageView!
-  @IBOutlet weak var imagem6: UIImageView!
-  
-  
+  @IBOutlet weak var fotosCollectionView: UICollectionView!
 
-//##########################################
+  //##########################################
 //MARK: Properties
 //##########################################
-  var imagePicker = UIImagePickerController()
   var umaOcorrencia : Ocorrencia!
   
   //##########################################
   //MARK: Private Methods
   //##########################################
-  private var imagemFotos : ImagensFoto!
-  
+  private var imagePicker = UIImagePickerController()
+
   //##########################################
   //MARK: Métodos
   //##########################################
@@ -50,13 +41,13 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
   //##########################################
   @IBAction func cmdFoto(_ sender: Any) {
     
-    if (imagemFotos.totalImagens == 6) {
+    if (umaOcorrencia.imagensFotos.count >= 6) {
       let alerta = Alerta(titulo: "Atenção!", mensagem: "Podem ser enviados no máximo 6 imagens")
       self.present(alerta.alertaOK(), animated: true, completion: nil)
     }
     
-    imagePicker.sourceType = .camera  // SSSSSSS
-//    imagePicker.sourceType = .savedPhotosAlbum
+//    imagePicker.sourceType = .camera  // SSSSSSS
+    imagePicker.sourceType = .savedPhotosAlbum
 
     present(imagePicker, animated: true, completion: nil)
     
@@ -67,43 +58,18 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     callCenter.callToCallCenter(view: self)
   }
   
-  
-  
-  
+
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
     
+    let indexPath = IndexPath(row:umaOcorrencia.imagensFotos.count, section: 0)
+
     let imagemRecuperada = info[UIImagePickerControllerOriginalImage] as! UIImage
+    let indiceProximaFoto = umaOcorrencia.imagensFotos.count + 1
+    let foto = UmaFoto(imagem: imagemRecuperada, descricao: "Foto \(indiceProximaFoto) ")
+    umaOcorrencia.imagensFotos.append(foto)
     
-    switch (imagemFotos.totalImagens) {
-    case 0:
-      imagemFotos.totalImagens = 1
-      imagemFotos.imagem1 = imagemRecuperada
-      imagem1.image = imagemRecuperada
-    case 1:
-      imagemFotos.totalImagens = 2
-      imagemFotos.imagem2 = imagemRecuperada
-      imagem2.image = imagemRecuperada
-    case 2:
-      imagemFotos.totalImagens = 3
-      imagemFotos.imagem3 = imagemRecuperada
-      imagem3.image = imagemRecuperada
-    case 3:
-      imagemFotos.totalImagens = 4
-      imagemFotos.imagem4 = imagemRecuperada
-      imagem4.image = imagemRecuperada
-    case 4:
-      imagemFotos.totalImagens = 5
-      imagemFotos.imagem5 = imagemRecuperada
-      imagem5.image = imagemRecuperada
-    case 5:
-      imagemFotos.totalImagens = 6
-      imagemFotos.imagem6 = imagemRecuperada
-      imagem6.image = imagemRecuperada
-    default:
-      let alerta = Alerta(titulo: "Atenção!", mensagem: "Podem ser enviados no máximo 6 imagens")
-      self.present(alerta.alertaOK(), animated: true, completion: nil)
-    
-    }
+    fotosCollectionView.insertItems(at: [indexPath])
+
     imagePicker.dismiss(animated: true, completion: nil)
     
   }
@@ -117,51 +83,52 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
 
   
     override func viewDidLoad() {
+      
         super.viewDidLoad()
 
      // Do any additional setup after loading the view.
       imagePicker.delegate = self
       
-      imagem1.image = nil
-      imagem2.image = nil
-      imagem3.image = nil
-      imagem4.image = nil
-      imagem5.image = nil
-      imagem6.image = nil
+      let cellItemSize = ((UIScreen.main.bounds.width-40)/2) - 10
       
-      imagemFotos = umaOcorrencia.documentos
+      let layout = UICollectionViewFlowLayout()
+      layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
+      layout.itemSize = CGSize(width: cellItemSize, height: cellItemSize + 26 )
+
+      layout.minimumInteritemSpacing = 10
+      layout.minimumLineSpacing = 10
       
-      if (imagemFotos.totalImagens > 0) {
-        for i in 1 ... imagemFotos.totalImagens {
-          
-          switch i {
-          case 1:
-            imagem1.image = imagemFotos.imagem1
-          case 2:
-            imagem2.image = imagemFotos.imagem2
-          case 3:
-            imagem3.image = imagemFotos.imagem3
-          case 4:
-            imagem4.image = imagemFotos.imagem4
-          case 5:
-            imagem5.image = imagemFotos.imagem5
-          case 6:
-            imagem6.image = imagemFotos.imagem6
-          default:
-            imagemFotos.totalImagens = 6
-          }
-          
-        }
-      }
+      fotosCollectionView.collectionViewLayout = layout
       
       
-    }
+
+  }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+  
+  
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
+    return 1
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+      return umaOcorrencia.imagensFotos.count
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "celula", for: indexPath) as! ImagemFotoCollectionViewCell
+    
+    cell.imagemFoto.image = umaOcorrencia.imagensFotos[ indexPath.row ].imagemFoto
+    cell.descricaoFoto.text = umaOcorrencia.imagensFotos[ indexPath.row ].descricaoFoto
+
+    return cell
+    
+  }
+
 
     /*
     // MARK: - Navigation

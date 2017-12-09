@@ -18,7 +18,7 @@ class Ocorrencia {
   public var condicaoFinal: String   // "Nao Informado", Estavel, Grave ou Obito
   public var Endereco: EnderecoMapa
   public var identificacao: IdentificacaoBeneficiario
-  public var documentos: ImagensFoto
+  public var imagensFotos: [UmaFoto]
   public var tipoTrauma: TipoTrauma
   public var informacaoClinica: InformacaoClinica
   public var operadora: OperadoraSaude
@@ -34,11 +34,11 @@ class Ocorrencia {
     self.condicaoFinal = "Nao Informado"
     self.Endereco = EnderecoMapa()
     self.identificacao = IdentificacaoBeneficiario()
-    self.documentos = ImagensFoto()
     self.tipoTrauma = TipoTrauma()
     self.informacaoClinica = InformacaoClinica()
     self.operadora = OperadoraSaude()
     self.hospital = Hospital()
+    self.imagensFotos = []
     
   }
   

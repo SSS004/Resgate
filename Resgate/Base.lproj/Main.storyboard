@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UJ9-ZG-GAx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UJ9-ZG-GAx">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -968,76 +968,68 @@
                                     <constraint firstItem="q3A-KX-ZPj" firstAttribute="centerX" secondItem="OGv-M4-p9d" secondAttribute="centerX" id="yIo-cm-gzg"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="of8-9n-Co7" userLabel="Master Stack View">
-                                <rect key="frame" x="47" y="123" width="320" height="490"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0UQ-Rp-RLD" userLabel="First Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qy9-i6-SmD">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="9ca-8A-8tA"/>
-                                                    <constraint firstAttribute="height" constant="150" id="FH0-N0-jVm"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YMB-rI-Ji8">
-                                                <rect key="frame" x="170" y="0.0" width="150" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="gYU-xC-xjX"/>
-                                                    <constraint firstAttribute="width" constant="150" id="qSv-yb-JmB"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aQ6-2h-WQx" userLabel="Second Stack View">
-                                        <rect key="frame" x="0.0" y="170" width="320" height="150"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C1B-ha-67v">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="ALs-If-Qn3"/>
-                                                    <constraint firstAttribute="height" constant="150" id="fbj-28-Y42"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EfS-md-oX5">
-                                                <rect key="frame" x="170" y="0.0" width="150" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="6zn-TM-Dve"/>
-                                                    <constraint firstAttribute="width" constant="150" id="8qR-w4-2qZ"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O1D-Tp-UMB" userLabel="Third Stack View">
-                                        <rect key="frame" x="0.0" y="340" width="320" height="150"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yT0-k0-wbu">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="5QM-3t-6KA"/>
-                                                    <constraint firstAttribute="width" constant="150" id="qUq-xg-WvR"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ec4-MF-MgJ">
-                                                <rect key="frame" x="170" y="0.0" width="150" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="9Wr-Qc-H4x"/>
-                                                    <constraint firstAttribute="width" constant="150" id="jUp-rm-aAY"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gmG-GN-ZeI">
+                                <rect key="frame" x="20" y="84" width="374" height="572"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IXQ-vC-XpH">
+                                    <size key="itemSize" width="191" height="174"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="celula" id="KHw-w8-Xjn" customClass="ImagemFotoCollectionViewCell" customModule="Resgate" customModuleProvider="target">
+                                        <rect key="frame" x="91.666666666666671" y="0.0" width="191" height="174"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="191" height="174"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kOd-Pg-H8k">
+                                                    <rect key="frame" x="0.0" y="0.0" width="191" height="148"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foto 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMl-AP-QK6">
+                                                    <rect key="frame" x="0.0" y="148" width="191" height="26"/>
+                                                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="26" id="Z0G-tH-VTT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="kOd-Pg-H8k" firstAttribute="trailing" secondItem="KHw-w8-Xjn" secondAttribute="trailing" id="4Fm-a6-EO2"/>
+                                            <constraint firstItem="kOd-Pg-H8k" firstAttribute="top" secondItem="KHw-w8-Xjn" secondAttribute="top" id="5ip-l5-wWr"/>
+                                            <constraint firstItem="kOd-Pg-H8k" firstAttribute="bottom" secondItem="bMl-AP-QK6" secondAttribute="top" id="Lqb-VE-fOz"/>
+                                            <constraint firstItem="bMl-AP-QK6" firstAttribute="leading" secondItem="KHw-w8-Xjn" secondAttribute="leading" id="RXs-Dn-P4O"/>
+                                            <constraint firstItem="kOd-Pg-H8k" firstAttribute="leading" secondItem="KHw-w8-Xjn" secondAttribute="leading" id="fui-KW-DD1"/>
+                                            <constraint firstItem="bMl-AP-QK6" firstAttribute="trailing" secondItem="KHw-w8-Xjn" secondAttribute="trailing" id="mnv-j7-GRH"/>
+                                            <constraint firstItem="bMl-AP-QK6" firstAttribute="bottom" secondItem="KHw-w8-Xjn" secondAttribute="bottom" id="vlr-22-Fwk"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="descricaoFoto" destination="bMl-AP-QK6" id="2VW-jc-2RH"/>
+                                            <outlet property="imagemFoto" destination="kOd-Pg-H8k" id="vVg-sU-kT6"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="TUk-bh-rhF" id="8wV-j3-MP6"/>
+                                    <outlet property="delegate" destination="TUk-bh-rhF" id="Wyb-WJ-VQR"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OGv-M4-p9d" firstAttribute="trailing" secondItem="ilN-zf-PuV" secondAttribute="trailing" id="JaA-Er-aYj"/>
-                            <constraint firstItem="of8-9n-Co7" firstAttribute="centerY" secondItem="XNB-gS-l9A" secondAttribute="centerY" id="P1c-lS-tCW"/>
                             <constraint firstItem="OGv-M4-p9d" firstAttribute="bottom" secondItem="ilN-zf-PuV" secondAttribute="bottom" id="Z96-EV-blH"/>
+                            <constraint firstItem="gmG-GN-ZeI" firstAttribute="top" secondItem="ilN-zf-PuV" secondAttribute="top" constant="20" id="bfI-zA-pY9"/>
+                            <constraint firstItem="gmG-GN-ZeI" firstAttribute="leading" secondItem="ilN-zf-PuV" secondAttribute="leading" constant="20" id="fmU-XJ-06k"/>
                             <constraint firstItem="OGv-M4-p9d" firstAttribute="leading" secondItem="ilN-zf-PuV" secondAttribute="leading" id="frl-lm-7RG"/>
-                            <constraint firstItem="of8-9n-Co7" firstAttribute="centerX" secondItem="XNB-gS-l9A" secondAttribute="centerX" id="qsT-kW-o3N"/>
+                            <constraint firstItem="gmG-GN-ZeI" firstAttribute="bottom" secondItem="OGv-M4-p9d" secondAttribute="top" constant="-20" id="jFJ-iZ-EO6"/>
+                            <constraint firstItem="gmG-GN-ZeI" firstAttribute="trailing" secondItem="ilN-zf-PuV" secondAttribute="trailing" constant="-20" id="phn-Kd-xWt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ilN-zf-PuV"/>
                     </view>
@@ -1049,17 +1041,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imagem1" destination="qy9-i6-SmD" id="fgX-Bi-vwm"/>
-                        <outlet property="imagem2" destination="YMB-rI-Ji8" id="wvf-5Y-vX0"/>
-                        <outlet property="imagem3" destination="C1B-ha-67v" id="Pht-SN-4fe"/>
-                        <outlet property="imagem4" destination="EfS-md-oX5" id="AV7-oN-pUD"/>
-                        <outlet property="imagem5" destination="yT0-k0-wbu" id="lRq-Ie-TAb"/>
-                        <outlet property="imagem6" destination="Ec4-MF-MgJ" id="rsa-qi-jBd"/>
+                        <outlet property="fotosCollectionView" destination="gmG-GN-ZeI" id="Zm9-Xz-XXX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8E-75-YSq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5167" y="-1171"/>
+            <point key="canvasLocation" x="5166.666666666667" y="-1171.467391304348"/>
         </scene>
         <!--Hospital Table View Controller-->
         <scene sceneID="pCe-sx-Ef1">

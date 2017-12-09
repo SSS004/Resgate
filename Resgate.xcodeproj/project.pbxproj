@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		570C2C460DCC2AE147F20973 /* Pods_Resgate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD4FC9A0F3679916EC0729F /* Pods_Resgate.framework */; };
 		A23AAD34E5D5A0BFE69787EA /* Pods_ResgateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D760106C29DB2508DA15E0E /* Pods_ResgateTests.framework */; };
+		B60917E11FDB4D6A0090AD04 /* UmaFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60917E01FDB4D6A0090AD04 /* UmaFoto.swift */; };
+		B60917E31FDB4FCB0090AD04 /* ImagemFotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60917E21FDB4FCB0090AD04 /* ImagemFotoCollectionViewCell.swift */; };
 		B62248361FD5CB1D00953436 /* mapaNovoAtendimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62248351FD5CB1D00953436 /* mapaNovoAtendimentoViewController.swift */; };
 		B62522821FCE57C4004D6C0A /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62522811FCE57C4004D6C0A /* TextFieldExtensions.swift */; };
 		B6350D581FD6CD2300BF845E /* ocorrenciaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6350D571FD6CD2300BF845E /* ocorrenciaTableViewController.swift */; };
@@ -19,7 +21,6 @@
 		B66E1B351FCF2CA000782D62 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E1B341FCF2CA000782D62 /* Alerta.swift */; };
 		B66E1B371FCF319200782D62 /* Validacoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E1B361FCF319200782D62 /* Validacoes.swift */; };
 		B67388BB1FD78292000ACAFD /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67388BA1FD78292000ACAFD /* PhotoViewController.swift */; };
-		B67388C11FD7A57D000ACAFD /* ImagensFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67388C01FD7A57D000ACAFD /* ImagensFoto.swift */; };
 		B67388C31FD7AF92000ACAFD /* CallCenterNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67388C21FD7AF92000ACAFD /* CallCenterNumber.swift */; };
 		B67388C71FD7B584000ACAFD /* TipoTraumaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67388C61FD7B584000ACAFD /* TipoTraumaTableViewController.swift */; };
 		B67388C91FD7B9CD000ACAFD /* TipoTrauma.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67388C81FD7B9CD000ACAFD /* TipoTrauma.swift */; };
@@ -63,6 +64,8 @@
 		5E5F85C2B9C74B446737BEB3 /* Pods-Resgate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resgate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Resgate/Pods-Resgate.debug.xcconfig"; sourceTree = "<group>"; };
 		7B20B0CF918665FC53F02F23 /* Pods-ResgateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResgateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ResgateTests/Pods-ResgateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FD4FC9A0F3679916EC0729F /* Pods_Resgate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resgate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60917E01FDB4D6A0090AD04 /* UmaFoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmaFoto.swift; sourceTree = "<group>"; };
+		B60917E21FDB4FCB0090AD04 /* ImagemFotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagemFotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		B62248351FD5CB1D00953436 /* mapaNovoAtendimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapaNovoAtendimentoViewController.swift; sourceTree = "<group>"; };
 		B62522811FCE57C4004D6C0A /* TextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
 		B6350D571FD6CD2300BF845E /* ocorrenciaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ocorrenciaTableViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +77,6 @@
 		B66E1B341FCF2CA000782D62 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 		B66E1B361FCF319200782D62 /* Validacoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validacoes.swift; sourceTree = "<group>"; };
 		B67388BA1FD78292000ACAFD /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		B67388C01FD7A57D000ACAFD /* ImagensFoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagensFoto.swift; sourceTree = "<group>"; };
 		B67388C21FD7AF92000ACAFD /* CallCenterNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCenterNumber.swift; sourceTree = "<group>"; };
 		B67388C61FD7B584000ACAFD /* TipoTraumaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoTraumaTableViewController.swift; sourceTree = "<group>"; };
 		B67388C81FD7B9CD000ACAFD /* TipoTrauma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoTrauma.swift; sourceTree = "<group>"; };
@@ -228,13 +230,14 @@
 				B69A84301FD1E38B00288AC7 /* FirebaseCustomizado.swift */,
 				B6A995FB1FD70676001AB71B /* ocorrencia.swift */,
 				B6A995FD1FD709C3001AB71B /* EnderecoMapa.swift */,
-				B67388C01FD7A57D000ACAFD /* ImagensFoto.swift */,
 				B67388C21FD7AF92000ACAFD /* CallCenterNumber.swift */,
 				B67388C81FD7B9CD000ACAFD /* TipoTrauma.swift */,
 				B6977DE01FD80E24005114E2 /* IdentificacaoBeneficiario.swift */,
 				B6977DE21FD8106A005114E2 /* OperadoraSaude.swift */,
 				B6977DE41FD811A9005114E2 /* InformacaoClinica.swift */,
 				B6977DE61FD8125F005114E2 /* Hospital.swift */,
+				B60917E01FDB4D6A0090AD04 /* UmaFoto.swift */,
+				B60917E21FDB4FCB0090AD04 /* ImagemFotoCollectionViewCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -475,7 +478,6 @@
 				B62522821FCE57C4004D6C0A /* TextFieldExtensions.swift in Sources */,
 				B660314F1FD398920030314A /* LoginViewController.swift in Sources */,
 				B68E9C161FCC98030028AE1B /* AppDelegate.swift in Sources */,
-				B67388C11FD7A57D000ACAFD /* ImagensFoto.swift in Sources */,
 				B6BEBC7B1FD3D9F500C98350 /* CadastroViewController.swift in Sources */,
 				B6350D581FD6CD2300BF845E /* ocorrenciaTableViewController.swift in Sources */,
 				B62248361FD5CB1D00953436 /* mapaNovoAtendimentoViewController.swift in Sources */,
@@ -483,11 +485,13 @@
 				B6977DE51FD811A9005114E2 /* InformacaoClinica.swift in Sources */,
 				B6350D5A1FD6E28200BF845E /* HomeTableViewController.swift in Sources */,
 				B66E1B371FCF319200782D62 /* Validacoes.swift in Sources */,
+				B60917E11FDB4D6A0090AD04 /* UmaFoto.swift in Sources */,
 				B66E1B351FCF2CA000782D62 /* Alerta.swift in Sources */,
 				B67388C71FD7B584000ACAFD /* TipoTraumaTableViewController.swift in Sources */,
 				B67479E21FD8415F008BCDC2 /* HospitalTableViewController.swift in Sources */,
 				B69A84311FD1E38B00288AC7 /* FirebaseCustomizado.swift in Sources */,
 				B67388BB1FD78292000ACAFD /* PhotoViewController.swift in Sources */,
+				B60917E31FDB4FCB0090AD04 /* ImagemFotoCollectionViewCell.swift in Sources */,
 				B67388C91FD7B9CD000ACAFD /* TipoTrauma.swift in Sources */,
 				B6A995FC1FD70676001AB71B /* ocorrencia.swift in Sources */,
 				B67388C31FD7AF92000ACAFD /* CallCenterNumber.swift in Sources */,
