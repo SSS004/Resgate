@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
   
@@ -19,16 +20,36 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
 //MARK: Outlet to Objects
 //##########################################
   @IBOutlet weak var fotosCollectionView: UICollectionView!
-
+  @IBOutlet weak var mensagemNenhumaFoto: UILabel!
+  
+  
   //##########################################
 //MARK: Properties
 //##########################################
   var umaOcorrencia : Ocorrencia!
+  var mostraCameraSeColecaoZeradaDeFotos: Bool = true
+  
+  private var imagePicker = UIImagePickerController()
+  private var indiceImagemSelecionada: Int = 0
   
   //##########################################
   //MARK: Private Methods
   //##########################################
-  private var imagePicker = UIImagePickerController()
+  private func mostrarCamera() {
+    
+    if (umaOcorrencia.imagensFotos.count >= 6) {
+      
+      self.mostraAlertaOK(titulo: "Atenção!", mensagem: "Podem ser enviados no máximo 6 imagens")
+      
+    }
+  
+    //    imagePicker.sourceType = .camera  // SSSSSSS
+    imagePicker.sourceType = .savedPhotosAlbum
+    
+    present(imagePicker, animated: true, completion: nil)
+
+  }
+
 
   //##########################################
   //MARK: Métodos
@@ -41,15 +62,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
   //##########################################
   @IBAction func cmdFoto(_ sender: Any) {
     
-    if (umaOcorrencia.imagensFotos.count >= 6) {
-      let alerta = Alerta(titulo: "Atenção!", mensagem: "Podem ser enviados no máximo 6 imagens")
-      self.present(alerta.alertaOK(), animated: true, completion: nil)
-    }
-    
-//    imagePicker.sourceType = .camera  // SSSSSSS
-    imagePicker.sourceType = .savedPhotosAlbum
-
-    present(imagePicker, animated: true, completion: nil)
+    mostrarCamera()
     
   }
   
@@ -84,26 +97,53 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
   
     override func viewDidLoad() {
       
-        super.viewDidLoad()
+      super.viewDidLoad()
+      
+      SVProgressHUD.show()
 
-     // Do any additional setup after loading the view.
       imagePicker.delegate = self
       
+      // Configura a largura e altura da celula para caber exatamente duas fotos na largura
+      // UIScreen.main.bounds.width contém a largura da tela, diminuiu-se 40 pois a view
+      // da coleção esta com constraint para ter margem de 20 no lado esquerdo e direito
+      // Entao (UIScreen.main.bounds.width-40)/2) seria a largura da celula.
+      // Como o inimumInteritemSpacing = 10 entao diminuimos de 10 por causa deste espaço
       let cellItemSize = ((UIScreen.main.bounds.width-40)/2) - 10
       
       let layout = UICollectionViewFlowLayout()
       layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
+      // A altura da celula foi acrescido de 26 pois é a altura do label "descricao da foto"
       layout.itemSize = CGSize(width: cellItemSize, height: cellItemSize + 26 )
 
       layout.minimumInteritemSpacing = 10
       layout.minimumLineSpacing = 10
       
       fotosCollectionView.collectionViewLayout = layout
-      
-      
 
   }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    
+    SVProgressHUD.show()
+    
+    fotosCollectionView.reloadData()
+    
+    if (mostraCameraSeColecaoZeradaDeFotos) {
+      
+      mostraCameraSeColecaoZeradaDeFotos = false
+      if (umaOcorrencia.imagensFotos.count == 0) {
+        mostrarCamera() 
+      }
+    }
 
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    
+    SVProgressHUD.dismiss()
+
+  }
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -115,7 +155,12 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      return umaOcorrencia.imagensFotos.count
+    
+    mensagemNenhumaFoto.isHidden = (umaOcorrencia.imagensFotos.count > 0)
+    fotosCollectionView.isHidden  = (umaOcorrencia.imagensFotos.count == 0)
+
+    return umaOcorrencia.imagensFotos.count
+    
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -128,8 +173,26 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     return cell
     
   }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
+    self.performSegue(withIdentifier: "seguePhoto2UmaFoto", sender: nil)
+    indiceImagemSelecionada = indexPath.row
+    
+  }
 
+  // Uma SEGUE foi executada para chamar uma View Controller
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    if segue.identifier == "seguePhoto2UmaFoto" {
+      
+      // Chamou a view que mostra o MAPA, passa para a segue o endereco
+      if let umaFotoView = segue.destination as? umaFotoViewController {
+        umaFotoView.indiceImagemSelecionada = indiceImagemSelecionada
+        umaFotoView.umaOcorrencia = umaOcorrencia
+      }
+    }
+  }
     /*
     // MARK: - Navigation
 

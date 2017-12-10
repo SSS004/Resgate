@@ -51,8 +51,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
       // Avisa que o email não é válido
       txtEmail.becomeFirstResponder()
       
-      let alerta = Alerta(titulo: "Atenção!", mensagem: "\nEntre com um e-mail válido")
-      self.present(alerta.alertaOK(), animated: true, completion: nil)
+      self.mostraAlertaOK(titulo: "Atenção!", mensagem: "\nEntre com um e-mail válido")
       
       return false
       
@@ -67,8 +66,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
       txtSenha.becomeFirstResponder()
       
       // Avisa que a senha precisa ser preenchida
-      let alerta = Alerta(titulo: "Atenção!", mensagem: "\nEntre com uma senha")
-      self.present(alerta.alertaOK(), animated: true, completion: nil)
+      self.mostraAlertaOK(titulo: "Atenção!", mensagem: "\nEntre com uma senha")
       
       return false
     }
@@ -166,8 +164,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                   } else {
                                     
                                     SVProgressHUD.dismiss()
-                                    let alerta = Alerta(titulo: "Atenção", mensagem: "Usuário não foi criado")
-                                    self.present(alerta.alertaOK(), animated: true, completion: nil)
+                                    self.mostraAlertaOK(titulo: "Atenção!", mensagem: "Usuário não foi criado")
                                     
                                   }
                                 } else {
@@ -181,14 +178,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                     }
                                     
                                     SVProgressHUD.dismiss()
-                                    let alerta = Alerta(titulo: "Não foi possivel autenticar o usuário!", mensagem: mensagemErroString)
-                                    self.present(alerta.alertaOK(), animated: true, completion: nil)
+                                    
+                                    self.mostraAlertaOK(titulo: "Não foi possivel autenticar o usuário!", mensagem: mensagemErroString)
                                     
                                   } else {
                                     
                                     SVProgressHUD.dismiss()
-                                    let alerta = Alerta(titulo: "Atenção", mensagem: "Ocorreu erro desconhecido ao tentar autenticar o usuário")
-                                    self.present(alerta.alertaOK(), animated: true, completion: nil)
+                                    self.mostraAlertaOK(titulo: "Atenção!", mensagem: "Ocorreu erro desconhecido ao tentar autenticar o usuário")
                                     
                                   }
                                   
@@ -242,14 +238,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // Permite que o evento textFieldShouldReturn seja delegado para esta classe
     // Necessario declarar UITextFieldDelegate
     // -------------------------------------------------------------------------------------------------
-    UITextField.connectFieldbyReturnKey(fields: [txtEmail, txtSenha], returnKeyType: .done)
+    self.conectarCamposPelaTeclaDeRetorno(fields: [txtEmail, txtSenha], returnKeyType: .done)
     txtSenha.delegate = self
-
-    let clearImage = UIImage(named: "imagem_clear")!
-    txtEmail.clearButtonWithImage(clearImage)
     
-    let eyeIcon = UIImage(named:"eyes-icon")!
-    txtSenha.showPasswordButtonWithImage(eyeIcon)
+    self.setTextFieldPasswordButtonImage(textFieldArray: [txtSenha], iconName: "eyes-icon")
+    self.setTextFieldClearButtonImage(textFieldArray: [txtEmail], iconName: "imagem_clear")
     
     verificaUserDefaultsSalvosPelaAplicacao()
     

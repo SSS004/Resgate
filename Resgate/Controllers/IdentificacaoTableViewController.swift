@@ -62,7 +62,7 @@ class IdentificacaoTableViewController: UITableViewController {
         super.viewDidLoad()
       
       nome.text =  umaOcorrencia.identificacao.nomeCompleto
-      dataNasc.text = umaOcorrencia.identificacao.dataNasc.devolveDataHoraFormatada()
+      dataNasc.text = umaOcorrencia.identificacao.dataNasc.devolveDataFormatada()
       nomeMae.text = umaOcorrencia.identificacao.nomeMae
       cpf.text = umaOcorrencia.identificacao.cpf
       rg.text = umaOcorrencia.identificacao.rg

@@ -11,6 +11,9 @@
 		A23AAD34E5D5A0BFE69787EA /* Pods_ResgateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D760106C29DB2508DA15E0E /* Pods_ResgateTests.framework */; };
 		B60917E11FDB4D6A0090AD04 /* UmaFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60917E01FDB4D6A0090AD04 /* UmaFoto.swift */; };
 		B60917E31FDB4FCB0090AD04 /* ImagemFotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60917E21FDB4FCB0090AD04 /* ImagemFotoCollectionViewCell.swift */; };
+		B60917E51FDB6F0C0090AD04 /* umaFotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60917E41FDB6F0C0090AD04 /* umaFotoViewController.swift */; };
+		B612656B1FDD901D007FF2B5 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B612656A1FDD901D007FF2B5 /* ViewControllerExtensions.swift */; };
+		B612656D1FDDAB63007FF2B5 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B612656C1FDDAB63007FF2B5 /* DateExtensions.swift */; };
 		B62248361FD5CB1D00953436 /* mapaNovoAtendimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62248351FD5CB1D00953436 /* mapaNovoAtendimentoViewController.swift */; };
 		B62522821FCE57C4004D6C0A /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62522811FCE57C4004D6C0A /* TextFieldExtensions.swift */; };
 		B6350D581FD6CD2300BF845E /* ocorrenciaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6350D571FD6CD2300BF845E /* ocorrenciaTableViewController.swift */; };
@@ -18,8 +21,6 @@
 		B660314F1FD398920030314A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B660314E1FD398920030314A /* LoginViewController.swift */; };
 		B666BAE61FD1B79A00DBFEDE /* AppGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666BAE51FD1B79A00DBFEDE /* AppGlobal.swift */; };
 		B66E1B2F1FCEFBD100782D62 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E1B2E1FCEFBD100782D62 /* StringExtensions.swift */; };
-		B66E1B351FCF2CA000782D62 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E1B341FCF2CA000782D62 /* Alerta.swift */; };
-		B66E1B371FCF319200782D62 /* Validacoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E1B361FCF319200782D62 /* Validacoes.swift */; };
 		B67388BB1FD78292000ACAFD /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67388BA1FD78292000ACAFD /* PhotoViewController.swift */; };
 		B67388C31FD7AF92000ACAFD /* CallCenterNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67388C21FD7AF92000ACAFD /* CallCenterNumber.swift */; };
 		B67388C71FD7B584000ACAFD /* TipoTraumaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67388C61FD7B584000ACAFD /* TipoTraumaTableViewController.swift */; };
@@ -66,6 +67,9 @@
 		8FD4FC9A0F3679916EC0729F /* Pods_Resgate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resgate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60917E01FDB4D6A0090AD04 /* UmaFoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmaFoto.swift; sourceTree = "<group>"; };
 		B60917E21FDB4FCB0090AD04 /* ImagemFotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagemFotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		B60917E41FDB6F0C0090AD04 /* umaFotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = umaFotoViewController.swift; sourceTree = "<group>"; };
+		B612656A1FDD901D007FF2B5 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		B612656C1FDDAB63007FF2B5 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		B62248351FD5CB1D00953436 /* mapaNovoAtendimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapaNovoAtendimentoViewController.swift; sourceTree = "<group>"; };
 		B62522811FCE57C4004D6C0A /* TextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
 		B6350D571FD6CD2300BF845E /* ocorrenciaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ocorrenciaTableViewController.swift; sourceTree = "<group>"; };
@@ -74,8 +78,6 @@
 		B660314E1FD398920030314A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B666BAE51FD1B79A00DBFEDE /* AppGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGlobal.swift; sourceTree = "<group>"; };
 		B66E1B2E1FCEFBD100782D62 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		B66E1B341FCF2CA000782D62 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
-		B66E1B361FCF319200782D62 /* Validacoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validacoes.swift; sourceTree = "<group>"; };
 		B67388BA1FD78292000ACAFD /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		B67388C21FD7AF92000ACAFD /* CallCenterNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCenterNumber.swift; sourceTree = "<group>"; };
 		B67388C61FD7B584000ACAFD /* TipoTraumaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoTraumaTableViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B61265691FDD8FAE007FF2B5 /* Global Models */ = {
+			isa = PBXGroup;
+			children = (
+				B62522811FCE57C4004D6C0A /* TextFieldExtensions.swift */,
+				B66E1B2E1FCEFBD100782D62 /* StringExtensions.swift */,
+				B666BAE51FD1B79A00DBFEDE /* AppGlobal.swift */,
+				B69A84301FD1E38B00288AC7 /* FirebaseCustomizado.swift */,
+				B612656A1FDD901D007FF2B5 /* ViewControllerExtensions.swift */,
+				B612656C1FDDAB63007FF2B5 /* DateExtensions.swift */,
+			);
+			path = "Global Models";
+			sourceTree = "<group>";
+		};
 		B62248341FD5ABB400953436 /* SupporFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +199,7 @@
 				B68E9C191FCC98030028AE1B /* Main.storyboard */,
 				B68E9C241FCC98030028AE1B /* Info.plist */,
 				B69CAB9F1FCDC51D00E7A877 /* Controllers */,
+				B61265691FDD8FAE007FF2B5 /* Global Models */,
 				B69CABA41FCE00FB00E7A877 /* Models */,
 				B62248341FD5ABB400953436 /* SupporFiles */,
 			);
@@ -215,6 +231,7 @@
 				B67479DF1FD83C13008BCDC2 /* OperadoraTableViewController.swift */,
 				B67479E11FD8415F008BCDC2 /* HospitalTableViewController.swift */,
 				B6E5DFAB1FD84D6C001C581A /* InformacaoClinicaTableViewController.swift */,
+				B60917E41FDB6F0C0090AD04 /* umaFotoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -222,12 +239,6 @@
 		B69CABA41FCE00FB00E7A877 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B62522811FCE57C4004D6C0A /* TextFieldExtensions.swift */,
-				B66E1B2E1FCEFBD100782D62 /* StringExtensions.swift */,
-				B66E1B341FCF2CA000782D62 /* Alerta.swift */,
-				B66E1B361FCF319200782D62 /* Validacoes.swift */,
-				B666BAE51FD1B79A00DBFEDE /* AppGlobal.swift */,
-				B69A84301FD1E38B00288AC7 /* FirebaseCustomizado.swift */,
 				B6A995FB1FD70676001AB71B /* ocorrencia.swift */,
 				B6A995FD1FD709C3001AB71B /* EnderecoMapa.swift */,
 				B67388C21FD7AF92000ACAFD /* CallCenterNumber.swift */,
@@ -472,6 +483,7 @@
 				B6E61C351FD0E68600564B37 /* InitViewController.swift in Sources */,
 				B67479E01FD83C13008BCDC2 /* OperadoraTableViewController.swift in Sources */,
 				B6A995FE1FD709C3001AB71B /* EnderecoMapa.swift in Sources */,
+				B612656B1FDD901D007FF2B5 /* ViewControllerExtensions.swift in Sources */,
 				B6D01A5D1FD4482A008DD965 /* resetPasswordViewController.swift in Sources */,
 				B68E9C1E1FCC98030028AE1B /* Resgate.xcdatamodeld in Sources */,
 				B67479DE1FD83960008BCDC2 /* IdentificacaoTableViewController.swift in Sources */,
@@ -480,19 +492,19 @@
 				B68E9C161FCC98030028AE1B /* AppDelegate.swift in Sources */,
 				B6BEBC7B1FD3D9F500C98350 /* CadastroViewController.swift in Sources */,
 				B6350D581FD6CD2300BF845E /* ocorrenciaTableViewController.swift in Sources */,
+				B60917E51FDB6F0C0090AD04 /* umaFotoViewController.swift in Sources */,
 				B62248361FD5CB1D00953436 /* mapaNovoAtendimentoViewController.swift in Sources */,
 				B6977DE31FD8106A005114E2 /* OperadoraSaude.swift in Sources */,
 				B6977DE51FD811A9005114E2 /* InformacaoClinica.swift in Sources */,
 				B6350D5A1FD6E28200BF845E /* HomeTableViewController.swift in Sources */,
-				B66E1B371FCF319200782D62 /* Validacoes.swift in Sources */,
 				B60917E11FDB4D6A0090AD04 /* UmaFoto.swift in Sources */,
-				B66E1B351FCF2CA000782D62 /* Alerta.swift in Sources */,
 				B67388C71FD7B584000ACAFD /* TipoTraumaTableViewController.swift in Sources */,
 				B67479E21FD8415F008BCDC2 /* HospitalTableViewController.swift in Sources */,
 				B69A84311FD1E38B00288AC7 /* FirebaseCustomizado.swift in Sources */,
 				B67388BB1FD78292000ACAFD /* PhotoViewController.swift in Sources */,
 				B60917E31FDB4FCB0090AD04 /* ImagemFotoCollectionViewCell.swift in Sources */,
 				B67388C91FD7B9CD000ACAFD /* TipoTrauma.swift in Sources */,
+				B612656D1FDDAB63007FF2B5 /* DateExtensions.swift in Sources */,
 				B6A995FC1FD70676001AB71B /* ocorrencia.swift in Sources */,
 				B67388C31FD7AF92000ACAFD /* CallCenterNumber.swift in Sources */,
 			);

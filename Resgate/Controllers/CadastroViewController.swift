@@ -59,9 +59,8 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
               
               SVProgressHUD.dismiss()
               
-              // Avisa que todos os campos precisam ser preenchidos
-              let alerta = Alerta(titulo: "Atenção!", mensagem: "Todos os campos precisam ser preenchidos")
-              self.present(alerta.alertaOK(), animated: true, completion: nil)
+              self.mostraAlertaOK(titulo: "Atenção!", mensagem: "Todos os campos precisam ser preenchidos")
+              
               return false
               
             } else {
@@ -74,8 +73,8 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
                 SVProgressHUD.dismiss()
                 
                 // Avisa que todos os campos precisam ser preenchidos
-                let alerta = Alerta(titulo: "Atenção!", mensagem: "\nO nome precisa sem completo (nome e sobrenome) e não pode ter caracteres especiais")
-                self.present(alerta.alertaOK(), animated: true, completion: nil)
+                self.mostraAlertaOK(titulo: "Atenção!", mensagem: "\nO nome precisa sem completo (nome e sobrenome) e não pode ter caracteres especiais")
+
                 return false
                 
               } else {
@@ -89,8 +88,8 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
                 SVProgressHUD.dismiss()
                 
                 // Avisa que todos os campos precisam ser preenchidos
-                let alerta = Alerta(titulo: "Atenção!", mensagem: "\nO email não possui um formato válido, favor corrigir.")
-                self.present(alerta.alertaOK(), animated: true, completion: nil)
+                self.mostraAlertaOK(titulo: "Atenção!", mensagem: "\nO email não possui um formato válido, favor corrigir.")
+
                 return false
                 
               } else {
@@ -115,8 +114,8 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
                   SVProgressHUD.dismiss()
                   
                   // Avisa que a confirmação de senha está diferente da senhas
-                  let alerta = Alerta(titulo: "Atenção!", mensagem: "A senha precisa atender as seguintes regras:\n 1) Conter somente letras e números.\n 2) Ter no mínimo \(minLenght) e no máximo \(maxLenght) caracteres")
-                  self.present(alerta.alertaOK(), animated: true, completion: nil)
+                  self.mostraAlertaOK(titulo: "Atenção!", mensagem: "A senha precisa atender as seguintes regras:\n 1) Conter somente letras e números.\n 2) Ter no mínimo \(minLenght) e no máximo \(maxLenght) caracteres")
+
                   return false
                 }
                 
@@ -125,9 +124,9 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
                 SVProgressHUD.dismiss()
                 
                 // Avisa que a confirmação de senha está diferente da senhas
-                let alerta = Alerta(titulo: "Atenção!", mensagem: "A confirmação da senha está diferente")
-                self.present(alerta.alertaOK(), animated: true, completion: nil)
+                self.mostraAlertaOK(titulo: "Atenção!", mensagem: "A confirmação da senha está diferente")
                 return false
+ 
               }
             }
           }
@@ -147,8 +146,8 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
 //##########################################
 
   // ===========================================================================================
-  // Faz com que o foco mude de Field ao teclar Return. Se estiver no
-  // ultimo, executa o button cmdCadastrars
+  // Evento ocorre quando o usuário pressiona a tecla "Return".
+  // Se for o campo txtConfirmaSenha, tenta cadastrar o usuário
   // ===========================================================================================
   func textFieldShouldReturn(_ textField: UITextField) -> Bool
   {
@@ -226,8 +225,7 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
                                   
                                   SVProgressHUD.dismiss()
                                   
-                                  let alerta = Alerta(titulo: "Não foi possivel criar o acesso!", mensagem: "Usuário não foi criado")
-                                  self.present(alerta.alertaOK(), animated: true, completion: nil)
+                                  self.mostraAlertaOK(titulo: "Não foi possivel criar o acesso!", mensagem: "Usuário não foi criado")
                                   
                                 }
                               } else {
@@ -242,15 +240,13 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
                                   
                                   SVProgressHUD.dismiss()
                                   
-                                  let alerta = Alerta(titulo: "Não foi possivel criar o acesso!", mensagem: mensagemErroString)
-                                  self.present(alerta.alertaOK(), animated: true, completion: nil)
+                                  self.mostraAlertaOK(titulo: "Não foi possivel criar o acesso!", mensagem: mensagemErroString)
                                   
                                 } else {
                                   
                                   SVProgressHUD.dismiss()
                                   
-                                  let alerta = Alerta(titulo: "Não foi possivel criar o acesso!", mensagem: "Ocorreu erro desconhecido ao tentar criar o usuário")
-                                  self.present(alerta.alertaOK(), animated: true, completion: nil)
+                                  self.mostraAlertaOK(titulo: "Não foi possivel criar o acesso!", mensagem: "Ocorreu erro desconhecido ao tentar criar o usuário")
                                   
                                 }
                                 
@@ -288,19 +284,17 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
     // Permite que o evento textFieldShouldReturn seja delegado para esta classe
     // Necessario declarar UITextFieldDelegate
     // -------------------------------------------------------------------------------------------------
-    UITextField.connectFieldbyReturnKey(fields: [txtNomeCompleto, txtEmail, txtSenha, txtConfirmaSenha], returnKeyType: .done)
+    self.conectarCamposPelaTeclaDeRetorno(fields: [txtNomeCompleto, txtEmail, txtSenha, txtConfirmaSenha], returnKeyType: .done)
     txtConfirmaSenha.delegate = self
     // -------------------------------------------------------------------------------------------------
 
     // Customiza o icone para mostrar/esconder o texto da senha
-    let eyeIcon = UIImage(named:"eyes-icon")!
-    txtSenha.showPasswordButtonWithImage(eyeIcon)
-    txtConfirmaSenha.showPasswordButtonWithImage(eyeIcon)
+    self.setTextFieldPasswordButtonImage(textFieldArray: [txtSenha, txtConfirmaSenha], iconName: "eyes-icon")
+
+    self.setTextFieldClearButtonImage(textFieldArray: [], iconName: "imagem_clear")
 
     // Customiza o icone para apagar o texto de um TextFields
-    let clearImage = UIImage(named: "imagem_clear")!
-    txtEmail.clearButtonWithImage(clearImage)
-    txtNomeCompleto.clearButtonWithImage(clearImage)
+    self.setTextFieldClearButtonImage(textFieldArray: [txtEmail, txtNomeCompleto], iconName: "imagem_clear")
 
   }
   
@@ -349,46 +343,3 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
 
 
 
-
-
-/*
-// Call this method somewhere in your view controller setup code.
-- (void)registerForKeyboardNotifications
-  {
-    [[NSNotificationCenter defaultCenter] addObserver:self
-      selector:@selector(keyboardWasShown:)
-      name:UIKeyboardDidShowNotification object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-      selector:@selector(keyboardWillBeHidden:)
-      name:UIKeyboardWillHideNotification object:nil];
-    
-  }
-  
-  // Called when the UIKeyboardDidShowNotification is sent.
-  - (void)keyboardWasShown:(NSNotification*)aNotification
-{
-  NSDictionary* info = [aNotification userInfo];
-  CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
-  
-  UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
-  scrollView.contentInset = contentInsets;
-  scrollView.scrollIndicatorInsets = contentInsets;
-  
-  // If active text field is hidden by keyboard, scroll it so it's visible
-  // Your app might not need or want this behavior.
-  CGRect aRect = self.view.frame;
-  aRect.size.height -= kbSize.height;
-  if (!CGRectContainsPoint(aRect, activeField.frame.origin) ) {
-    [self.scrollView scrollRectToVisible:activeField.frame animated:YES];
-  }
-  }
-  
-  // Called when the UIKeyboardWillHideNotification is sent
-  - (void)keyboardWillBeHidden:(NSNotification*)aNotification
-{
-  UIEdgeInsets contentInsets = UIEdgeInsetsZero;
-  scrollView.contentInset = contentInsets;
-  scrollView.scrollIndicatorInsets = contentInsets;
-}
- */

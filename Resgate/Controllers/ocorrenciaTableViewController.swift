@@ -107,10 +107,18 @@ class ocorrenciaTableViewController: UITableViewController {
       //  Verifica se as variaveis foram passadas pela VIEW origem
       // -------------------------------------------------------------------
       if (umaOcorrencia == nil) {
-        let alerta = Alerta(titulo: "*** IMPORTANTE ***", mensagem: "\nVariável umaOcorrencia não foi inicializada!")
-        self.present(alerta.alertaOK(), animated: true, completion: nil)
+        self.mostraAlertaOK(titulo: "*** IMPORTANTE ***", mensagem: "\nRuntime: Variável umaOcorrencia não foi inicializada!")
         return
       }
+      
+      // SSSSSSS
+      umaOcorrencia.identificacao.nomeCompleto = "Marcos Paulo da Silva"
+      umaOcorrencia.identificacao.nomeMae = "Maria Renata da Silva"
+      umaOcorrencia.identificacao.carteirinha = "234.345.445.00-6"
+      umaOcorrencia.identificacao.cpf = "234.564.334-98"
+      umaOcorrencia.identificacao.rg = "23.443.223-45"
+      umaOcorrencia.identificacao.sexo = "Masculino"
+      umaOcorrencia.identificacao.dataNasc = "01/08/1956".devolveData(formato: "dd/MM/yyyy")
 
       // Se for uma nova ocorrencia, mostra a View Controller do MAPA
       if (umaOcorrencia.inicializado <= 1)  {
@@ -151,6 +159,13 @@ class ocorrenciaTableViewController: UITableViewController {
         ocorrenciaTipoTrauma.umaOcorrencia = self.umaOcorrencia
       }
       
+    } else if (segue.identifier == "segueOcorrencia2Identificacao") {
+
+      // Chamou a view que mostra o MAPA, passa para a segue o endereco
+      if let ocorrenciaIdentificacao = segue.destination as? IdentificacaoTableViewController {
+        ocorrenciaIdentificacao.umaOcorrencia = self.umaOcorrencia
+      }
+
     }
 
   }
@@ -162,11 +177,7 @@ class ocorrenciaTableViewController: UITableViewController {
     self.tableView.tableFooterView = UIView(frame: .zero)
     self.tableView.tableFooterView?.isHidden = true
     
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
-    dateFormatter.timeZone = TimeZone(identifier: "UTC")
-    
-    lblDataOcorrencia.text = dateFormatter.string(from: umaOcorrencia.dataOcorrencia)
+    lblDataOcorrencia.text = umaOcorrencia.dataOcorrencia.devolveDataHoraFormatada()
 
     lblEndereco.text = umaOcorrencia.Endereco.addressName
     // Se for uma nova ocorrencia, mostra a View Controller do MAPA

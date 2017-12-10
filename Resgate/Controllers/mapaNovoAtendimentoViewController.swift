@@ -41,8 +41,7 @@ class MapaNovoAtendimentoViewController: UIViewController, CLLocationManagerDele
     let endereco = enderecoOcorrencia.trimmingCharacters(in: .whitespacesAndNewlines)
     
     if (endereco == "") {
-      let alerta = Alerta(titulo: "Aviso", mensagem: "\nEntre com o endereço da ocorrência!")
-      self.present(alerta.alertaOK(), animated: true, completion: nil)
+      self.mostraAlertaOK(titulo: "Aviso", mensagem: "\nEntre com o endereço da ocorrência!")
       return
     }
     

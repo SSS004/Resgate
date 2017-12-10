@@ -14,12 +14,8 @@ class OperadoraTableViewController: UITableViewController {
   
   override func viewDidLoad() {
         super.viewDidLoad()
-    
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
-    dateFormatter.timeZone = TimeZone(identifier: "UTC")
-    
-    lblDataElegibilidade.text = dateFormatter.string(from: Date())
+       
+    lblDataElegibilidade.text = Date().devolveDataHoraFormatada()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

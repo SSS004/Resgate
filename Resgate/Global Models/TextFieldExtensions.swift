@@ -36,26 +36,6 @@ extension UITextField {
     let t = textField.text
     textField.text = t?.safelyLimitedTo(length: maxLength)
   }
-  
-  
-  //================================================================
-  // Implementa a possibilidade de usar o botão Proximo do Teclado
-  // para ir para o proximo campo quando for pressionado
-  //================================================================
-  class func connectFieldbyReturnKey(fields:[UITextField], returnKeyType retKeyType: UIReturnKeyType) -> Void {
-    
-    guard let last = fields.last else {
-      return
-    }
-    
-    for i in 0 ..< fields.count - 1 {
-      fields[i].returnKeyType = .next
-      fields[i].addTarget(fields[i+1], action: #selector(UIResponder.becomeFirstResponder), for: .editingDidEndOnExit)
-    }
-    last.returnKeyType = retKeyType
-    last.addTarget(last, action: #selector(UIResponder.resignFirstResponder), for: .editingDidEndOnExit)
-    
-  }
 
   
   //=====================================================
@@ -112,7 +92,7 @@ extension UITextField {
   // Permite alterar a imagem do "Clear Button"
   // de um Text Field
   //=====================================================
-  func clearButtonWithImage(_ image: UIImage) {
+  func showClearButtonWithImage(_ image: UIImage) {
     let clearButton = UIButton()
     clearButton.setImage(image, for: .normal)
     clearButton.frame = CGRect(x: 0, y: 0, width: 25, height: 16)

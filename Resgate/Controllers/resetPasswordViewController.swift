@@ -78,9 +78,7 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
         txtEmail.becomeFirstResponder()
         self.aivSpinner.stopAnimating()
         
-        // Avisa que o email não é válido
-        let alerta = Alerta(titulo: "Atenção!", mensagem: "\nEntre com um e-mail válido")
-        self.present(alerta.alertaOK(), animated: true, completion: nil)
+        self.mostraAlertaOK(titulo: "Atenção!", mensagem: "\nEntre com um e-mail válido")
         
         return
         
@@ -119,15 +117,16 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
             }
             
             self.aivSpinner.stopAnimating()
-            let alerta = Alerta(titulo: "Não foi possivel enviar email para o usuário!", mensagem: mensagemErroString)
-            self.present(alerta.alertaOK(), animated: true, completion: nil)
+            
+            self.mostraAlertaOK(titulo: "Não foi possivel enviar email para o usuário!", mensagem: mensagemErroString)
+
             
           } else {
             
             self.aivSpinner.stopAnimating()
-            let alerta = Alerta(titulo: "Atenção", mensagem: "Ocorreu erro desconhecido ao tentar enviar e-mail para o usuário")
-            self.present(alerta.alertaOK(), animated: true, completion: nil)
             
+            self.mostraAlertaOK(titulo: "Atenção!", mensagem: "Ocorreu erro desconhecido ao tentar enviar e-mail para o usuário")
+ 
           }
         }
       })
@@ -160,13 +159,12 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
     // Permite que o evento textFieldShouldReturn seja delegado para esta classe
     // Necessario declarar UITextFieldDelegate
     // -------------------------------------------------------------------------------------------------
-    UITextField.connectFieldbyReturnKey(fields: [txtEmail], returnKeyType: .done)
+    self.conectarCamposPelaTeclaDeRetorno(fields: [txtEmail], returnKeyType: .done)
     txtEmail.delegate = self
     // -------------------------------------------------------------------------------------------------
 
     // Customiza o icone para apagar o texto de um TextFields
-    let clearImage = UIImage(named: "imagem_clear")!
-    txtEmail.clearButtonWithImage(clearImage)
+    self.setTextFieldClearButtonImage(textFieldArray: [txtEmail], iconName: "imagem_clear")
 
   }
   

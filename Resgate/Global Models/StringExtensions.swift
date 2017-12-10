@@ -308,4 +308,14 @@ extension String
     
   } // *** Fim x_isPasswordValid
   
+  func devolveData(formato formatoData: String) -> Date {
+
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = formatoData //Your date format
+    dateFormatter.timeZone = TimeZone(identifier: "UTC") //Current time zone
+    return dateFormatter.date(from: self)! //according to date format your date string
+    
+  }
+  
+  
 }

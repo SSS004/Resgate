@@ -33,4 +33,3 @@ public func atualizarUserDefaults(salvarUsuario salvar: Bool, emailAddress email
   }
   
 }
-
