@@ -10,31 +10,72 @@ import UIKit
 
 class IdentificacaoTableViewController: UITableViewController {
 
+  //##########################################
+  //MARK: Enumerations
+  //##########################################
   
+  
+  //##########################################
+  //MARK: Outlet to Objects
+  //##########################################
   @IBOutlet weak var nome: UITextField!
   @IBOutlet weak var dataNasc: UITextField!
   @IBOutlet weak var nomeMae: UITextField!
   @IBOutlet weak var cpf: UITextField!
   @IBOutlet weak var rg: UITextField!
   @IBOutlet weak var sexo: UITextField!
+
+  
+  //##########################################
+  //MARK: Private Properties
+  //##########################################
   
   
+  //##########################################
+  //MARK: Properties
+  //##########################################
+  var umaOcorrencia: Ocorrencia!
+  
+  
+  //##########################################
+  //MARK: Private Methods
+  //##########################################
+ 
+  
+  
+  //##########################################
+  //MARK: Métodos
+  //##########################################
+  
+  
+  
+  //##########################################
+  //MARK: Actions
+  //##########################################
+  
+  
+  
+  //##########################################
+  //MARK: Override functions
+  //##########################################
     override func viewDidLoad() {
         super.viewDidLoad()
       
-      nome.text = "Marcos Paulo da Silva"
-      dataNasc.text = "04/09/1956"
-      nomeMae.text = "Gioconda da Silva"
-      cpf.text = "345.345.323-67"
-      rg.text = "12.213.455-8"
-      sexo.text = "Masculino"
+      nome.text =  umaOcorrencia.identificacao.nomeCompleto
+      dataNasc.text = umaOcorrencia.identificacao.dataNasc.devolveDataHoraFormatada()
+      nomeMae.text = umaOcorrencia.identificacao.nomeMae
+      cpf.text = umaOcorrencia.identificacao.cpf
+      rg.text = umaOcorrencia.identificacao.rg
+      sexo.text = umaOcorrencia.identificacao.sexo
+      
+      // Mostra o icone para apagar o conteudo do Text Field para os campos passados como parametro
+      self.setTextFieldClearButtonImage(textFieldArray: [nome, dataNasc, nomeMae, cpf, rg, sexo ], iconName: "imagem_clear")
+      
+      // Apos usuario pressionar a tecla retorno, faz com que o foco mude para o proximo Text Field informado no paramertro "fields".
+      // Se for o ultimo Text Field da lista, o foco vai para o primeiro da lista
+      self.conectarCamposPelaTeclaDeRetornoLoop(fields: [nome, dataNasc, nomeMae, cpf, rg, sexo])
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
+  }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
