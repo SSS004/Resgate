@@ -52,6 +52,18 @@ class IdentificacaoTableViewController: UITableViewController {
   //##########################################
   //MARK: Actions
   //##########################################
+  @IBAction func salvarIdentificacao(_ sender: Any) {
+    
+    umaOcorrencia.identificacao.nomeCompleto  = nome.text!
+    umaOcorrencia.identificacao.dataNasc = (dataNasc.text?.devolveData(formato: "dd/MM/yyyy"))!
+    umaOcorrencia.identificacao.nomeMae = nomeMae.text!
+    umaOcorrencia.identificacao.cpf = cpf.text!
+    umaOcorrencia.identificacao.rg = rg.text!
+    umaOcorrencia.identificacao.sexo = sexo.text!
+    
+    self.navigationController?.popViewController(animated: true)
+
+  }
   
   
   

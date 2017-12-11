@@ -1095,7 +1095,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="prM-LK-JMv">
                                 <rect key="frame" x="0.0" y="64" width="414" height="612"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VME-AO-uuS">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VME-AO-uuS">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="612"/>
                                     </imageView>
                                 </subviews>
@@ -1174,13 +1174,13 @@ São Paulo - SP</string>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhA-tj-8Vf">
-                                                    <rect key="frame" x="328" y="20" width="70" height="70"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Km" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhA-tj-8Vf">
+                                                    <rect key="frame" x="298" y="20" width="100" height="70"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="8Ie-2u-ePF"/>
+                                                        <constraint firstAttribute="width" constant="100" id="8Ie-2u-ePF"/>
                                                         <constraint firstAttribute="height" constant="70" id="wDQ-vp-eH3"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1224,13 +1224,13 @@ São Paulo - SP</string>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2,3 Km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9js-42-88y">
-                                                    <rect key="frame" x="328" y="20" width="70" height="70"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2,3 Km" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9js-42-88y">
+                                                    <rect key="frame" x="298" y="20" width="100" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="AVQ-Bq-yiv"/>
-                                                        <constraint firstAttribute="width" constant="70" id="syk-MH-Uf9"/>
+                                                        <constraint firstAttribute="width" constant="100" id="syk-MH-Uf9"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1274,13 +1274,13 @@ São Paulo - SP</string>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22,3 Km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCd-SN-gnF">
-                                                    <rect key="frame" x="328" y="20" width="70" height="70"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22,3 Km" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCd-SN-gnF">
+                                                    <rect key="frame" x="298" y="20" width="100" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="6lS-2a-XNU"/>
-                                                        <constraint firstAttribute="width" constant="70" id="twD-LU-ltq"/>
+                                                        <constraint firstAttribute="width" constant="100" id="twD-LU-ltq"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1302,6 +1302,11 @@ São Paulo - SP</string>
                             <outlet property="delegate" destination="rEi-pW-vWS" id="hUX-JL-9Et"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="hospitalEinsteinDistancia" destination="CCd-SN-gnF" id="lcV-bY-lnX"/>
+                        <outlet property="hospitalHCDistancia" destination="XhA-tj-8Vf" id="J1I-1u-InE"/>
+                        <outlet property="hospitalSirioDistancia" destination="9js-42-88y" id="ZVV-QP-wg2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mpg-n7-LnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1504,7 +1509,7 @@ São Paulo - SP</string>
         <!--Identificacao Table View Controller-->
         <scene sceneID="rzw-zT-0De">
             <objects>
-                <tableViewController id="uJ7-OF-7rW" customClass="IdentificacaoTableViewController" customModule="Resgate" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="uJ7-OF-7rW" userLabel="Identificacao Table View Controller" customClass="IdentificacaoTableViewController" customModule="Resgate" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="30" sectionFooterHeight="28" id="2mw-5p-F1Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1701,6 +1706,13 @@ São Paulo - SP</string>
                             <outlet property="delegate" destination="uJ7-OF-7rW" id="XQI-ib-gB8"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="iVA-va-sb2">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="dX4-Yb-mDD">
+                            <connections>
+                                <action selector="salvarIdentificacao:" destination="uJ7-OF-7rW" id="XFH-PZ-gag"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="cpf" destination="PW0-9W-otm" id="cQx-DW-TCP"/>
                         <outlet property="dataNasc" destination="9fc-TI-Dt1" id="oFE-16-OqB"/>

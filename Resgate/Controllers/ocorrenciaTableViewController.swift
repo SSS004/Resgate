@@ -166,7 +166,15 @@ class ocorrenciaTableViewController: UITableViewController {
         ocorrenciaIdentificacao.umaOcorrencia = self.umaOcorrencia
       }
 
+    } else if (segue.identifier == "segueOcorrencia2Hospital") {
+      
+      // Chamou a view que mostra o MAPA, passa para a segue o endereco
+      if let ocorrenciaHospitais = segue.destination as? HospitalTableViewController  {
+        ocorrenciaHospitais.umaOcorrencia = self.umaOcorrencia
+      }
+      
     }
+    
 
   }
   
@@ -179,7 +187,8 @@ class ocorrenciaTableViewController: UITableViewController {
     
     lblDataOcorrencia.text = umaOcorrencia.dataOcorrencia.devolveDataHoraFormatada()
 
-    lblEndereco.text = umaOcorrencia.Endereco.addressName
+    lblEndereco.text = umaOcorrencia.Endereco.endereco
+    
     // Se for uma nova ocorrencia, mostra a View Controller do MAPA
     if (umaOcorrencia.Endereco.location.coordinate.latitude == 0)  {
       setaEndereco.setImage(#imageLiteral(resourceName: "need-information"), for: UIControlState.normal)

@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import SVProgressHUD
 
 
 class MapaNovoAtendimentoViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate {
@@ -35,8 +36,7 @@ class MapaNovoAtendimentoViewController: UIViewController, CLLocationManagerDele
   //##########################################
   //MARK: Private Methods
   //##########################################
-
-  func validaEnderecoOrigem(endereco enderecoOcorrencia: String) {
+  private func validaEnderecoOrigem(endereco enderecoOcorrencia: String) {
     
     let endereco = enderecoOcorrencia.trimmingCharacters(in: .whitespacesAndNewlines)
     
@@ -45,20 +45,22 @@ class MapaNovoAtendimentoViewController: UIViewController, CLLocationManagerDele
       return
     }
     
-    let enderecoCompleto = "\(endereco), \(enderecoAux.locality), \(enderecoAux.country)"
+    SVProgressHUD.show()
+    
+    let enderecoCompleto = "\(endereco), \(enderecoAux.pais)"
     
     CLGeocoder().geocodeAddressString(enderecoCompleto) { (local, erro) in
+      
       if (erro == nil) {
+        
         if let dadosLocal = local?.first {
           
-          self.enderecoAux.addressName = endereco
-          self.enderecoAux.country = dadosLocal.country!
-          self.enderecoAux.locality = dadosLocal.locality!
-          self.enderecoAux.location = dadosLocal.location!
-
+          self.atualizaEnderecoAux( placemark: dadosLocal )
+          self.enderecoAux.endereco = endereco
+          
           // Remove anotacoes antes de criar a anotação do local atual
           self.mapa.removeAnnotations(self.mapa.annotations)
-
+          
           let coordenadas = CLLocationCoordinate2D(latitude: self.enderecoAux.location.coordinate.latitude,
                                                    longitude: self.enderecoAux.location.coordinate.longitude)
           
@@ -70,10 +72,136 @@ class MapaNovoAtendimentoViewController: UIViewController, CLLocationManagerDele
           anotacaoUsuario.coordinate = coordenadas
           anotacaoUsuario.title = "Sua localização"
           self.mapa.addAnnotation(anotacaoUsuario)
-
+          
+          SVProgressHUD.dismiss()
+          
+        } else {
+          
+          SVProgressHUD.dismiss()
+          
         }
+      } else {
+        
+        // Não foi possivel localizar endereço
+        SVProgressHUD.dismiss()
+        self.mostraAlertaOK(titulo: "Aviso!", mensagem: erro.debugDescription)
+      
       }
     }
+  }
+  
+  private func atualizaEnderecoAux( placemark: CLPlacemark ) {
+    
+    if (placemark.name == nil) {
+      self.enderecoAux.endereco = ""
+    } else {
+      self.enderecoAux.endereco = placemark.name!
+    }
+
+    if (placemark.subLocality == nil) {
+      self.enderecoAux.bairro = ""
+    } else {
+      self.enderecoAux.bairro = placemark.subLocality!
+    }
+
+    if (placemark.locality == nil) {
+      self.enderecoAux.localidade = ""
+    } else {
+      self.enderecoAux.localidade = placemark.locality!
+    }
+
+    if (placemark.administrativeArea == nil) {
+      self.enderecoAux.estado = ""
+    } else {
+      self.enderecoAux.estado = placemark.administrativeArea!
+    }
+
+    if (placemark.postalCode == nil) {
+      self.enderecoAux.codigoPostal = ""
+    } else {
+      self.enderecoAux.codigoPostal = placemark.postalCode!
+    }
+    
+    if (placemark.country == nil) {
+      self.enderecoAux.pais = ""
+    } else {
+      self.enderecoAux.pais = placemark.country!
+    }
+
+    if (placemark.isoCountryCode == nil) {
+      self.enderecoAux.codigoISOPais = ""
+    } else {
+      self.enderecoAux.codigoISOPais = placemark.isoCountryCode!
+    }
+    
+    self.enderecoAux.location = placemark.location!
+
+    //  placemark.name = endereco
+    //  placemark.locality = localidade
+    //  placemark.subLocality = bairro
+    //  placemark.administrativeArea = estado
+    //  placemark.postalCode = codigoPostal
+    //  placemark.country = pais
+    //  placemark.isoCountryCode = codigoISOPais
+
+/*
+    
+    if let placemarkName = placemark.name {
+      print ( "\nplacemark.name = \(placemarkName)")
+    } else {
+      print ( "placemark. = \"\"")
+    }
+
+    if let placemarkThoroughfare = placemark.thoroughfare {
+      print ( "placemark.thoroughfare = \(placemarkThoroughfare)")
+    } else {
+      print ( "placemark.thoroughfare = \"\"")
+    }
+
+    if let placemarksubThoroughfare = placemark.subThoroughfare {
+      print ( "placemark.subThoroughfare = \(placemarksubThoroughfare)")
+    } else {
+      print ( "placemark.subThoroughfare = \"\"")
+    }
+
+    if let placemarksubLocality = placemark.subLocality {
+      print ( "placemark.subLocality = \(placemarksubLocality)")
+    } else {
+      print ( "placemark.subLocality = \"\"")
+    }
+    
+    if let placemarklocality = placemark.locality {
+      print ( "placemark.locality = \(placemarklocality)")
+    } else {
+      print ( "placemark.locality = \"\"")
+    }
+
+    if let placemarkadministrativeArea = placemark.administrativeArea {
+      print ( "placemark.administrativeArea = \(placemarkadministrativeArea)")
+    } else {
+      print ( "placemark.administrativeArea = \"\"")
+    }
+
+    if let placemarkpostalCode = placemark.postalCode {
+      print ( "placemark.postalCode = \(placemarkpostalCode)")
+    } else {
+      print ( "placemark.postalCode = \"\"")
+    }
+
+    if let placemarkCountry = placemark.country {
+      print ( "placemark.country = \(placemarkCountry)")
+    } else {
+      print ( "placemark.country = \"\"")
+    }
+
+    if let placemarkisoCountryCode = placemark.isoCountryCode {
+      print ( "placemark.isoCountryCode = \(placemarkisoCountryCode)")
+    } else {
+      print ( "placemark.isoCountryCode = \"\"")
+    }
+
+ */
+    
   }
 
   
@@ -104,10 +232,17 @@ class MapaNovoAtendimentoViewController: UIViewController, CLLocationManagerDele
   //##########################################
   @IBAction func cmdSelecionarEndereco(_ sender: UIButton) {
     
+    // ==========================================================================
     // Salva o endereco selecionado para que possa ser consumida por outra views
-    enderecoSalvo.country = enderecoAux.country
-    enderecoSalvo.addressName = enderecoAux.addressName
-    enderecoSalvo.locality = enderecoAux.locality
+    // ==========================================================================
+    enderecoSalvo.endereco = enderecoAux.endereco
+    enderecoSalvo.localidade = enderecoAux.localidade
+    enderecoSalvo.bairro = enderecoAux.bairro
+    enderecoSalvo.estado = enderecoAux.estado
+    enderecoSalvo.codigoPostal = enderecoAux.codigoPostal
+    enderecoSalvo.pais = enderecoAux.pais
+    enderecoSalvo.codigoISOPais = enderecoAux.codigoISOPais
+
     enderecoSalvo.location = enderecoAux.location
     
     self.navigationController?.popViewController(animated: true)
@@ -124,10 +259,17 @@ class MapaNovoAtendimentoViewController: UIViewController, CLLocationManagerDele
   //##########################################
   //MARK: Override functions
   //##########################################
+  override func viewWillDisappear(_ animated: Bool) {
+    
+    SVProgressHUD.dismiss()
+    
+  }
   
   override func viewDidLoad() {
     
     super.viewDidLoad()
+    
+    SVProgressHUD.show()
 
     self.areaEndereco.layer.cornerRadius = 10
     self.areaEndereco.clipsToBounds = true
@@ -142,11 +284,16 @@ class MapaNovoAtendimentoViewController: UIViewController, CLLocationManagerDele
     // Recebeu um endereco na variável enderecoSalvo pela view pai que chamou esta views
     if !((enderecoSalvo.location.coordinate.latitude == 0) && (enderecoSalvo.location.coordinate.longitude == 0)) {
       
-        enderecoAux.addressName = enderecoSalvo.addressName
-        enderecoAux.country = enderecoSalvo.country
-        enderecoAux.locality = enderecoSalvo.locality
-        enderecoAux.location = CLLocation(latitude: enderecoSalvo.location.coordinate.latitude, longitude: enderecoSalvo.location.coordinate.longitude)
-
+      self.enderecoAux.endereco = enderecoSalvo.endereco
+      self.enderecoAux.bairro = enderecoSalvo.bairro
+      self.enderecoAux.localidade = enderecoSalvo.localidade
+      self.enderecoAux.estado = enderecoSalvo.estado
+      self.enderecoAux.codigoPostal = enderecoSalvo.codigoPostal
+      self.enderecoAux.pais = enderecoSalvo.pais
+      self.enderecoAux.codigoISOPais = enderecoSalvo.codigoISOPais
+      
+      self.enderecoAux.location = CLLocation(latitude: enderecoSalvo.location.coordinate.latitude, longitude: enderecoSalvo.location.coordinate.longitude)
+      
       // Remove anotacoes antes de criar a anotação do local atual
       self.mapa.removeAnnotations(self.mapa.annotations)
       
@@ -162,12 +309,15 @@ class MapaNovoAtendimentoViewController: UIViewController, CLLocationManagerDele
       anotacaoUsuario.title = "Sua localização"
       self.mapa.addAnnotation(anotacaoUsuario)
       
-      txtEnderecoOcorrencia.text = enderecoSalvo.addressName
+      txtEnderecoOcorrencia.text = enderecoSalvo.endereco
       
       self.enderecoInformado = true
-
+      
+      SVProgressHUD.dismiss()
+      
     } else {
       
+//      gerenciadorLocalizacao.requestLocation()
       gerenciadorLocalizacao.startUpdatingLocation()
       self.enderecoInformado = false
       
@@ -203,13 +353,14 @@ class MapaNovoAtendimentoViewController: UIViewController, CLLocationManagerDele
           // Place details
           if let placeMark = placemarks?[0] {
             
-            self.enderecoAux.addressName = placeMark.name!
-            self.enderecoAux.country = placeMark.country!
-            self.enderecoAux.locality = placeMark.locality!
+            self.gerenciadorLocalizacao.stopUpdatingLocation()
+
+            self.atualizaEnderecoAux(placemark: placeMark)
             self.enderecoAux.location = location
             
             self.txtEnderecoOcorrencia.text = placeMark.name!
-            self.gerenciadorLocalizacao.stopUpdatingLocation()
+            
+            SVProgressHUD.dismiss()
             
            }
         }
@@ -221,7 +372,7 @@ class MapaNovoAtendimentoViewController: UIViewController, CLLocationManagerDele
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-  
+
   
   /*
    // MARK: - Navigation
